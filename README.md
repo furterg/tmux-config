@@ -14,7 +14,7 @@ My personal tmux configuration.
 ### 1. Clone this repo
 
 ```bash
-git clone git@github.com:gregfuenmayor/tmux-config.git ~/.config/tmux
+git clone https://github.com/furterg/tmux-config.git ~/.config/tmux
 ```
 
 > If you already have a `~/.config/tmux`, back it up first:
