@@ -7,11 +7,20 @@ My personal tmux configuration.
 - tmux ≥ 3.0
 - Any login shell (auto-detected via `$SHELL` — zsh, bash, etc.)
 - `qdbus` for clipboard integration on KDE Plasma (part of `qdbus` / `qt5-tools`)
-- A Nerd Font or Powerline-compatible font (for tmux-powerline status bar)
 
 ## Installation
 
-### 1. Clone this repo
+### Quick install
+
+Detects macOS (Homebrew) or Linux (apt, pacman, dnf, zypper, apk), installs the dependencies, then clones this repo, TPM and all plugins. Re-running it updates an existing install.
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/furterg/tmux-config/main/install.sh | bash
+```
+
+### Manual install
+
+#### 1. Clone this repo
 
 ```bash
 git clone https://github.com/furterg/tmux-config.git ~/.config/tmux
@@ -20,7 +29,7 @@ git clone https://github.com/furterg/tmux-config.git ~/.config/tmux
 > If you already have a `~/.config/tmux`, back it up first:
 > `mv ~/.config/tmux ~/.config/tmux.bak`
 
-### 2. Install TPM (Tmux Plugin Manager)
+#### 2. Install TPM (Tmux Plugin Manager)
 
 TPM is installed directly into the XDG config directory:
 
@@ -28,32 +37,9 @@ TPM is installed directly into the XDG config directory:
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ```
 
-### 3. Install plugins
+#### 3. Install plugins
 
 Start tmux, then press `Ctrl-a + I` (capital I) to install all plugins automatically.
-
-### 4. Set up tmux-powerline user config
-
-```bash
-mkdir -p ~/.config/tmux-powerline/themes
-cp ~/.config/tmux/tmux-powerline/config.sh ~/.config/tmux-powerline/config.sh
-cp ~/.config/tmux/tmux-powerline/themes/default.sh ~/.config/tmux-powerline/themes/default.sh
-```
-
-### 5. Install a Nerd Font
-
-**Ubuntu/Debian:**
-```bash
-sudo apt install fonts-nerd-font-symbols
-# or manually from https://www.nerdfonts.com/font-downloads
-```
-
-**Arch/Manjaro:**
-```bash
-sudo pacman -S ttf-nerd-fonts-symbols
-```
-
-Then set the font in your terminal emulator's preferences.
 
 ## Plugins
 
