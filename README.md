@@ -2,6 +2,8 @@
 
 My personal tmux configuration.
 
+![tmux status bar](docs/screenshot.png)
+
 ## Prerequisites
 
 - tmux ≥ 3.0
